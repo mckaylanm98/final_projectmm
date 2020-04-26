@@ -1,0 +1,347 @@
+.container {
+    display: grid;
+    height: 150vh;
+    min-width: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        " h "
+        " welcome "
+        " b "
+        " mission "
+        " f ";
+    font-family: "roboto", sans-serif;
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo {
+    display: block;
+    word-wrap: break-word;
+    font-size: 20px;
+
+}
+
+.head {
+    grid-area: h;
+    display: flex;
+    height: 100%;
+    background-color: #BCD39C;
+    font-size: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #544e33;
+    padding-bottom: 80px;
+}
+
+.foot {
+    grid-area: f;
+    background-color: #BCD39C;
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+}
+
+.body {
+    background-color: white;
+    color: #544e33;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: flex-end;
+    padding: 100px;
+
+   
+}
+
+
+
+.dropdown_menu {
+    position: absolute;
+}
+
+
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.menubar li {
+    display: inline-block;
+    padding: 1rem;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    background-color: #8e8358;
+    color: white;
+    border-radius: 25px;
+    width: auto;
+    font-size: 20px;
+    ;
+}
+
+
+
+/* The above menubar li changes the color of the menu buttons, not dropdown */
+
+
+.menubar li:hover {
+    background-color: #544e33;
+    color: white;
+}
+
+
+.menubar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 30px;
+    font-family: "roboto", sans-serif;
+    width: fit-content;
+
+}
+
+.menubar li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    margin-top: 1rem;
+    z-index: 1;
+}
+
+.menubar a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+.menubar li:hover ul {
+    display: block;
+    color: #544e33;
+
+
+}
+
+
+.logo {
+    height: 100px;
+    width: fit-content;
+    margin-left: 4%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+
+h1 {
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+    font-size: 37px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    line-height: 1.5;
+    flex-wrap: wrap;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 30%;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    line-height: .75;
+    background-color: white;
+    margin: 15px;
+}
+
+button {
+    width: fit-content;
+    height: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border: 2px solid #8e8358;
+    color: #8e8358;
+    border-radius: 2px;
+    background-color: white;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+button:hover {
+    background-color: #fffc99;
+    color: #544e33;
+}
+
+label {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #544e33;
+}
+
+form {
+    width: 50%;
+    height: fit-content;
+    background-color: #EAFDCF;
+    color: #544e33;
+    border: 1px solid #544e33;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 20px;
+    font-size: 20px;
+    border-radius: 2px;
+
+
+}
+
+.formbutton {
+    width: 100%;
+    height: fit-content;
+    padding: 2px;
+
+}
+
+
+img {
+    max-width: 100%;
+    height: inherit;
+    padding: 10px;
+}
+
+
+
+
+
+/* Welcome div formatting found below */
+
+.welcome {
+    grid-area: welcome;
+    background-color: #EAFDCF;
+    padding: 35px;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    align-content: space-around;
+    align-items: center;
+}
+
+
+#welcomephoto {
+    width: 38%;
+    height: 40%;
+    padding: none;
+
+}
+
+
+/* Mission div formatting below */
+
+
+.mission {
+    grid-area: mission;
+    background-color: #EAFDCF;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+    align-content: space-around;
+    height: auto;
+    align-items: center;
+    padding: 50px;
+
+}
+
+
+
+#missionpic {
+    width: 40%;
+    height: 60%;
+    padding: none;
+
+}
+
+#logotohome {
+    text-decoration: none;
+    color: #544e33;
+
+}
+
+
+#renegadepic {
+    width: 40vh;
+    height: 60vh;
+    padding-bottom: 60px;
+    padding-top: 50px;
+}
+
+#noconapic {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    width: 70vh;
+    height: 50vh;
+}
+
+
+
+
+@media (min-width:481px) and (max-width:768px) {
+
+.body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: auto;
+    height: auto;
+}
+
+.content{
+    z-index: 1;
+    padding: 30px;
+}
+
+.mission {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+}
+
+
+}
+
